@@ -984,13 +984,15 @@
                                     </div>
                                 </div>
                                 <div class="row">
-
+                                    <?php
+                                        $suggestedUsername=getNewUsername();
+                                        ?>
                                     <div class="col-md-3 col-sm-3 col-xs-12">
                                         <div class="item form-group">
                                             <label for="username"><?php echo $this->lang->line('username'); ?> <span
                                                     class="required">*</span></label>
                                             <input class="form-control col-md-7 col-xs-12" name="username" id="username"
-                                                value="<?php echo isset($post['username']) ?  $post['username'] : ''; ?>"
+                                                value="<?php echo isset($post['username']) ?  $post['username'] : $suggestedUsername; ?>"
                                                 placeholder="<?php echo $this->lang->line('username'); ?>"
                                                 required="required" type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('username'); ?></div>
@@ -1001,7 +1003,7 @@
                                             <label for="password"><?php echo $this->lang->line('password'); ?> <span
                                                     class="required">*</span></label>
                                             <input class="form-control col-md-7 col-xs-12" name="password" id="password"
-                                                value="<?php echo isset($post['password']) ?  $post['password'] : ''; ?>"
+                                                value="<?php echo isset($post['password']) ?  $post['password'] : $suggestedUsername; ?>"
                                                 placeholder="<?php echo $this->lang->line('password'); ?>"
                                                 required="required" type="text" autocomplete="off">
                                             <div class="help-block"><?php echo form_error('password'); ?></div>
