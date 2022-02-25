@@ -1914,4 +1914,12 @@ if (!function_exists('get_student_access_data')) {
    }   
 }
 
+
+if (!function_exists('getNewUsername')) {
+
+    function getNewUsername() {
+        return date('jmy-').str_shuffle(date('his')).rand(0,9);
+    }
+}
+
 /*STRICT DATA ACCESS END*/

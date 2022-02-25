@@ -20,6 +20,7 @@
         <link href="<?php echo VENDOR_URL; ?>bootstrap/bootstrap.min.css" rel="stylesheet">       
         <!-- Custom Theme Style -->
         <link href="<?php echo CSS_URL; ?>custom.css" rel="stylesheet">
+        <link href="<?php echo CSS_URL; ?>master.css" rel="stylesheet">
         
         <style>
             body {background: #fff;}

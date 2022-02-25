@@ -20,7 +20,8 @@
         <link href="<?php echo VENDOR_URL; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">     
         <!-- Custom Theme Style -->
         <link href="<?php echo CSS_URL; ?>custom.css" rel="stylesheet">
-        
+        <link href="<?php echo CSS_URL; ?>master.css" rel="stylesheet">
+
          <?php $this->load->view('layout/login-css'); ?>          
         
     </head>

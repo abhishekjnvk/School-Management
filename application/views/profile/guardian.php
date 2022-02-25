@@ -206,7 +206,7 @@
                                         <th><?php echo $this->lang->line('name'); ?></th>
                                         <th><?php echo $this->lang->line('class'); ?></th>
                                         <th><?php echo $this->lang->line('section'); ?></th>
-                                        <th><?php echo $this->lang->line('group'); ?></th>
+                                        <th class="hide-it"><?php echo $this->lang->line('group'); ?></th>
                                         <th><?php echo $this->lang->line('gender'); ?></th>
                                         <th><?php echo $this->lang->line('blood_group'); ?></th>
                                         <th><?php echo $this->lang->line('photo'); ?></th>
@@ -221,7 +221,7 @@
                                             <td><?php echo ucfirst($obj->name); ?></td>
                                             <td><?php echo $obj->class_name; ?></td>
                                             <td><?php echo $obj->section; ?></td>
-                                            <td><?php echo $this->lang->line($obj->group); ?></td>
+                                            <td class="hide-it"><?php echo $this->lang->line($obj->group); ?></td>
                                             <td><?php echo $this->lang->line($obj->gender); ?></td>
                                             <td><?php echo $this->lang->line($obj->blood_group); ?></td>
                                             <td>

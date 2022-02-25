@@ -23,7 +23,8 @@
         <link rel="stylesheet" href="<?php echo CSS_URL; ?>front/animate.css">
         <link rel="stylesheet" href="<?php echo CSS_URL; ?>front/meanmenu.css">
         <link rel="stylesheet" href="<?php echo CSS_URL; ?>front/jquery.fancybox.min.css">
-        
+        <link href="<?php echo CSS_URL; ?>master.css" rel="stylesheet">
+
         <?php if(isset($school->theme_name)){ ?>
             <link rel="stylesheet" href="<?php echo CSS_URL; ?>front/theme/<?php echo $school->theme_name; ?>.css">
         <?php }else{ ?>

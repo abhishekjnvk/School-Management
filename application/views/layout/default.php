@@ -30,7 +30,8 @@
         
         <!-- Font Awesome -->
         <link href="<?php echo VENDOR_URL; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    
+        <link href="<?php echo CSS_URL; ?>master.css" rel="stylesheet">
+
         <!-- Custom Theme Style -->
         <?php if($this->school_setting->enable_rtl){ ?>
             <link href="<?php echo CSS_URL; ?>rtl/custom-rtl.css" rel="stylesheet">             

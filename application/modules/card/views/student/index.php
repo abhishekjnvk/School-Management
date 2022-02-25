@@ -148,6 +148,7 @@
 </div>
 
 <link href="<?php echo CSS_URL; ?>card.css" rel="stylesheet">
+<link href="<?php echo CSS_URL; ?>master.css" rel="stylesheet">
 <?php $this->load->view('layout/card'); ?>   
 
 <!-- Super admin js START  -->

@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="<?php echo CSS_URL; ?>front/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo CSS_URL; ?>front/style.css">
         <link rel="stylesheet" href="<?php echo CSS_URL; ?>front/responsive.css">     
-        
+        <link href="<?php echo CSS_URL; ?>master.css" rel="stylesheet">
+
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/png" href="<?php echo IMG_URL; ?>front/favicon.ico">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

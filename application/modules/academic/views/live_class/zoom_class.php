@@ -18,6 +18,7 @@
         <link href="<?php echo VENDOR_URL; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
     
         <link href="<?php echo CSS_URL; ?>custom.css" rel="stylesheet">
+        <link href="<?php echo CSS_URL; ?>master.css" rel="stylesheet">
        
         
         <?php if($this->session->userdata('theme')){ ?>
