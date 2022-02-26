@@ -3,15 +3,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /* * ***************Profile.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : Profile
  * @description     : This class used to manage logged in users 
  *                    profile information of the application.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class Profile extends My_Controller {

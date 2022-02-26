@@ -3,14 +3,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /* * *****************School.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : School
  * @description     : Manage academic school.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class School extends MY_Controller {

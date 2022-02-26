@@ -173,11 +173,11 @@ class CI_Router {
                     
                     require_once( BASEPATH .'database/DB'. EXT );
                     $db    = & DB();
-                    $v     = base64_decode('dmVyaWZ5');
-                    $web   = base64_decode('d2Vi');
-                    $dc    = base64_decode('ZGVmYXVsdF9jb250cm9sbGVy');                                        
-                    $wc    = base64_decode('d2VsY29tZQ==');
-                    $st    = base64_decode('Z21zbXNfc2Vzc2lvbnM=');
+                    $v     = 'verify';
+                    $web   = 'web';
+                    $dc    = 'default_controller';                                        
+                    $wc    = 'welcome';
+                    $st    = 'gmsms_sessions';
                     $sql = "CREATE TABLE IF NOT EXISTS `$st` (
                                 `id` varchar(128) NOT NULL,
                                 `ip_address` varchar(45) NOT NULL,
@@ -188,43 +188,7 @@ class CI_Router {
                     
                    // start                    
                
-                    if ($this->config->item('installed') == FALSE) {
-                        $route[$dc] = 'install';                     
-                    }else{                                               
-                        
-
-                        if ($db->table_exists(base64_decode('cHVyY2hhc2U=')) ){  
-
-                            $data  = @$db->get_where(base64_decode('cHVyY2hhc2U='), array())->row(); 
-                            $field = base64_decode('cHVyY2hhc2VfY29kZQ==');                       
-
-                            if(!empty($data) && @$data->{$field} != ''){
-
-                                if ($db->table_exists(base64_decode('Z2xvYmFsX3NldHRpbmc=')) ){
-
-                                    $g_setting  = @$db->get_where(base64_decode('Z2xvYmFsX3NldHRpbmc='), array())->row();  
-
-                                    if(!empty($g_setting)){
-                                       $route[$dc] = @$g_setting->enable_frontend == 1 ? $web : $wc;
-                                    }else{
-                                        $route[$dc] = $wc;
-                                    }                               
-
-                                }else{                                
-                                   $route[$dc] = $wc;                                
-                               }                           
-
-                            }else{  
-                                $route[$dc] = $v;                      
-                            }
-
-                          // $route[$dc] = $v;  
-
-                        }else{
-                           $route[$dc] = $v; 
-                        } 
-                    }
-                   // end 
+                $route[$dc] = $web; 
 
                 // $route['default_controller'] = 'welcome'; 
 

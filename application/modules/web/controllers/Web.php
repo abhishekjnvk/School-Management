@@ -3,14 +3,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /* * *****************Web.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : Web
  * @description     : Manage frontend website.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class Web extends CI_Controller {
@@ -93,8 +89,6 @@ class Web extends CI_Controller {
     * @return          : null 
     * ********************************************************** */
     public function index() {
-        
-        
         if($this->session->userdata('front_school_id')){           
 
             $school_id = $this->session->userdata('front_school_id');

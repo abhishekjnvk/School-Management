@@ -7,10 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @type            : Class
  * @class name      : Smstemplate
  * @description     : Manage academic template.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class Smstemplate extends MY_Controller {

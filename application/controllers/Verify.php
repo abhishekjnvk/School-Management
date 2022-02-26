@@ -2,17 +2,6 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/* * *****************Verify.php**********************************
- * @product name    : Global Multi School Management System Express
- * @type            : Class
- * @class name      : Verify
- * @description     : This class used to store purchase code in the database for customer security.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
- * ********************************************************** */
-
 class Verify extends CI_Controller {
     
      public $global_setting = array();
@@ -25,39 +14,25 @@ class Verify extends CI_Controller {
 
 
     public function index() {
-         
-        if($_POST){
-            
-            $this->load->library('form_validation');
-            $this->form_validation->set_error_delimiters('<div class="error-message" style="color: red;">', '</div>');
-            $this->form_validation->set_rules('purchase_code', $this->lang->line('purchase_code'), 'trim|required');
-
-            if ($this->form_validation->run() === TRUE) {
-                                                
-                $data['purchase_code'] = $this->input->post('purchase_code');
-                $data['created_at'] = date('Y-m-d H:i:s');
-                $data['created_by'] = 1;
-                $data['status'] = 1;                
-                
-                if($this->db->table_exists('purchase')){
-                    $this->db->empty_table('purchase');                   
-                    if($this->db->insert('purchase', $data)){                   
-                        $this->session->set_flashdata('success', $this->lang->line('update_success'));
-                    }else{
-                        $this->session->set_flashdata('error', $this->lang->line('update_failed'));
-                    }                 
-                }
-               
-                $this->verify->verify($data['purchase_code']);                
-                sleep(5);                
-                redirect('login');         
-                
-            }else{
-                $this->session->set_flashdata('error', $this->lang->line('insert_failed'));
-                redirect();
-            }
-        }
-        $this->lang->load('english', 'english');      
-        $this->load->view('verify');
+        $sql = "CREATE TABLE IF NOT EXISTS `purchase` (
+            `id` int(11) NOT NULL,
+            `purchase_code` varchar(255) NOT NULL,
+            `status` tinyint(1) NOT NULL,
+            `created_at` datetime NOT NULL,
+            `modified_at` datetime NOT NULL,
+            `created_by` int(11) NOT NULL,
+            `modified_by` int(11) NOT NULL
+          ) ENGINE=MyISAM DEFAULT CHARSET=utf8;";   
+        $this->db->query($sql);
+      
+        $data = array();
+        $data['id'] = 1;
+        $data['purchase_code'] = "purchase_code";
+        $data['created_at'] = date('Y-m-d H:i:s');
+        $data['created_by'] = 1;
+        $data['status'] = 1;       
+        $this->db->empty_table('purchase');     
+        $this->db->insert('purchase', $data);
+        redirect();
     }       
 }

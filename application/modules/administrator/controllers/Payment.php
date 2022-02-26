@@ -3,14 +3,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /* * *****************Payment.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : Payment
  * @description     : Manage school Payment setting.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class Payment extends MY_Controller {

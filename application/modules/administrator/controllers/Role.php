@@ -3,14 +3,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /* * *****************Role.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : Role
  * @description     : Manage system user role.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class Role extends MY_Controller {

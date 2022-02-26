@@ -3,14 +3,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /* * *****************User.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : User
  * @description     : Manage all type of systm users like student, employee, guardian and teacher.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class User extends MY_Controller {

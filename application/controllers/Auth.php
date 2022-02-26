@@ -4,15 +4,11 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 /* * ***************Auth.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : Auth
  * @description     : This class used to handle user authentication functionality 
  *                    of the application.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class Auth extends CI_Controller {

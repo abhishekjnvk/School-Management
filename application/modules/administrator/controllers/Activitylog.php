@@ -7,10 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @type            : Class
  * @class name      : Activitylog
  * @description     : Manage activity log.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class Activitylog extends MY_Controller {

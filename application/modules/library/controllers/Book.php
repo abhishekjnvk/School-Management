@@ -3,14 +3,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /* * *****************Book.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : Book
  * @description     : Manage library books information.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 
 class Book extends MY_Controller {

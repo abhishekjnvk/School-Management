@@ -2,14 +2,10 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 /* * *****************Backup.php**********************************
- * @product name    : Global Multi School Management System Express
  * @type            : Class
  * @class name      : Backup
  * @description     : Backup system database by system adminstrator.  
- * @author          : Codetroopers Team 	
- * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+	
  * ********************************************************** */
 class Backup extends MY_Controller {
 
