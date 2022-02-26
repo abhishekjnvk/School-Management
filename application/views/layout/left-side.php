@@ -8,7 +8,7 @@
                     <?php  echo $this->global_setting->brand_name; ?>
                 </span>
                 <?php }else{ ?>
-                <span>Multi School</span>
+                <span>School Express</span>
                 <?php } ?>
 
                 <?php if($this->global_setting->brand_logo){ ?>

@@ -568,6 +568,6 @@ define('EDIT', '1');
 define('VIEW', '2');
 define('DELETE', '3');
 
-define('SMS', 'Global - Multi School Management System Express');
-define('FROM_EMAIL', 'info@gmsms.com');
-define('FROM_NAME', 'Global Multi School');
+define('SMS', 'School Express : Pseudo Software');
+define('FROM_EMAIL', 'info@pseudohack.in');
+define('FROM_NAME', 'School Express: Pseudo Software');
