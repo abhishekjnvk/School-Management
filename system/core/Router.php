@@ -173,9 +173,7 @@ class CI_Router {
                     
                     require_once( BASEPATH .'database/DB'. EXT );
                     $db    = & DB();
-                    $v     = 'verify';
                     $web   = 'web';
-                    $dc    = 'default_controller';                                        
                     $wc    = 'welcome';
                     $st    = 'gmsms_sessions';
                     $sql = "CREATE TABLE IF NOT EXISTS `$st` (
@@ -188,7 +186,7 @@ class CI_Router {
                     
                    // start                    
                
-                $route[$dc] = $web; 
+                $route['default_controller'] = $web; 
 
                 // $route['default_controller'] = 'welcome'; 
 

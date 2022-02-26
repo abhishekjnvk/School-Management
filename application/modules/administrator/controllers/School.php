@@ -436,7 +436,7 @@ class School extends MY_Controller {
         }
         
         // need to find all child data from database 
-        $skips = array('global_setting', 'gmsms_sessions', 'languages', 'modules', 'operations', 'privileges', 'purchase', 'replies', 'roles', 'schools', 'system_admin', 'themes');
+        $skips = array('global_setting', 'gmsms_sessions', 'languages', 'modules', 'operations', 'privileges', 'replies', 'roles', 'schools', 'system_admin', 'themes');
         $tables = $this->db->list_tables();
         
          foreach ($tables as $table) {
