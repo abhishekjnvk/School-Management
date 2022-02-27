@@ -19,18 +19,20 @@ class Welcome extends CI_Controller {
      * ********************************************************** */
     public $global_setting = array();
     public function index() {
-        if (logged_in_user_id()) {
-            redirect('dashboard');
-        }
+        if(isset($_GET['activation_key'])){
+            if (logged_in_user_id()) {
+                redirect('dashboard');
+            }
+            $this->global_setting = $this->db->get_where('global_setting', array('status'=>1))->row();
 
-        $this->global_setting = $this->db->get_where('global_setting', array('status'=>1))->row();
-
-        if(!empty($this->global_setting) && $this->global_setting->language){             
-            $this->lang->load($this->global_setting->language);             
+            if(!empty($this->global_setting) && $this->global_setting->language){             
+                $this->lang->load($this->global_setting->language);             
+            }else{
+            $this->lang->load('english');
+            }
+            $this->load->view('login');            
         }else{
-           $this->lang->load('english');
+            echo "Login Through Website is Disabled";
         }
-        $this->load->view('login');
     }
-
 }
