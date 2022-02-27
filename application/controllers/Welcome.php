@@ -19,7 +19,7 @@ class Welcome extends CI_Controller {
      * ********************************************************** */
     public $global_setting = array();
     public function index() {
-        if(isset($_GET['activation_key'])){
+        // if(isset($_GET['activation_key'])){
             if (logged_in_user_id()) {
                 redirect('dashboard');
             }
@@ -31,8 +31,8 @@ class Welcome extends CI_Controller {
             $this->lang->load('english');
             }
             $this->load->view('login');            
-        }else{
-            echo "Login Through Website is Disabled";
-        }
+        // }else{
+        //     echo "Login Through Website is Disabled";
+        // }
     }
 }
