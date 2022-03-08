@@ -19,7 +19,13 @@ class Welcome extends CI_Controller {
      * ********************************************************** */
     public $global_setting = array();
     public function index() {
-        // if(isset($_GET['activation_key'])){
+
+        //get key from header
+        $loginDevice=$this->input->get_request_header('loginDevice');
+        if(!$loginDevice) $loginDevice="desktop";
+        // $activation_key=$this->input->get_request_header('activation_key')||"1222";
+        // echo $activation_key;
+        if(!empty($loginDevice)){
             if (logged_in_user_id()) {
                 redirect('dashboard');
             }
@@ -31,8 +37,13 @@ class Welcome extends CI_Controller {
             $this->lang->load('english');
             }
             $this->load->view('login');            
-        // }else{
-        //     echo "Login Through Website is Disabled";
-        // }
+        }else{
+            if(empty($loginDevice)){
+                echo "Login Through Website is Disabled";
+            }
+            // if(empty($activation_key)){
+            //     echo "Activation Key is Missing";
+            // }
+        }
     }
 }
